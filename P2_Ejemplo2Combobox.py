@@ -12,9 +12,9 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
 
-        self.comboBox.addItem("Gato",1) #Texto, data
-        self.comboBox.addItem("Cuyo", 2)  # Texto, data
-        self.comboBox.addItem("Perro", 3)  # Texto, data
+        self.comboBox.addItem("Gato",100) #Texto, data
+        self.comboBox.addItem("Cuyo", 200)  # Texto, data
+        self.comboBox.addItem("Perro", 300)  # Texto, data
 
         self.txt_totalElementos.setEnabled(False)
 

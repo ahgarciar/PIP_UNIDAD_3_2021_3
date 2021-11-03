@@ -13,19 +13,19 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
 
         self.alumnos = {
-            "Pablo": ["Pablo",18, "Ing. en Mercadotecnia"],
-            "Salma": ["Salma", 16, "Ing. Industrial"],
-            "Gustavo": ["Gustavo", 21, "Ing. Civil"],
-            "Alan": ["Alan", 19, "Ing. en Sistemas Computacionales"],
-            "Leyva": ["Leyva", 20, "Ing. en Geomatica"]
+            "Rolando": ["Rolando",18, "Ing. en Mercadotecnia"],
+            "Juan": ["Juan", 16, "Ing. Industrial"],
+            "Fernando": ["Fernando", 21, "Ing. Civil"],
+            "Jesus": ["Jesus", 19, "Ing. en Sistemas Computacionales"],
+            "Julio": ["Julio", 20, "Ing. en Geomatica"]
         }
 
-        self.lw_alumnos.addItem(self.alumnos.get("Pablo")[0])
-        self.lw_alumnos.addItem(self.alumnos["Salma"][0])
+        self.lw_alumnos.addItem(self.alumnos.get("Rolando")[0])
+        self.lw_alumnos.addItem(self.alumnos["Juan"][0])
+        self.lw_alumnos.addItem(self.alumnos.get("Fernando")[0])
+        self.lw_alumnos.addItem(self.alumnos.get("Jesus")[0])
+        self.lw_alumnos.addItem(self.alumnos.get("Julio")[0])
 
-        self.lw_alumnos.addItem(self.alumnos.get("Gustavo")[0])
-        self.lw_alumnos.addItem(self.alumnos.get("Alan")[0])
-        self.lw_alumnos.addItem(self.alumnos.get("Leyva")[0])
 
         cant_elementos = self.lw_alumnos.count()
         self.txt_total.setText(str(cant_elementos))
@@ -34,18 +34,19 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.btn_eliminar.clicked.connect(self.eliminar)
 
+
     def eliminar(self):
         indice = self.lw_alumnos.currentRow()
         print(indice)
         if indice != -1:
-            ##Error Detectado: Lineas al reves
+            ##Cuidado al poner las Lineas 43-44 despues de la linea 46 <---
             texto = self.lw_alumnos.currentItem().text()
-            self.alumnos.pop(texto)
+            self.alumnos.pop(texto) #elimina el elemento del diccionario
 
-            self.lw_alumnos.takeItem(indice)
-
+            self.lw_alumnos.takeItem(indice) #elimina al elemento del listwidget
 
             print(self.alumnos)
+
 
     def cambioFila(self):
         try:

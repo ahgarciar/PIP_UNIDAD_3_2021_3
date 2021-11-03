@@ -12,9 +12,9 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
 
-        self.comboBox.addItem("Gato",1) #Texto, data
+        self.comboBox.addItem("Gato","matricula1") #Texto, data
         self.comboBox.addItem("Cuyo", 2)  # Texto, data
-        self.comboBox.addItem("Perro", 3)  # Texto, data
+        self.comboBox.addItem("Perro", "matricula3")  # Texto, data
 
         self.txt_totalElementos.setEnabled(False)
 
@@ -23,16 +23,19 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.comboBox.currentIndexChanged.connect(self.cambio)
 
-        self.comboBox.setCurrentIndex(0)
+        self.comboBox.setCurrentIndex(-1)
+        #self.comboBox.setCurrentIndex(0)
+        #self.comboBox.setCurrentIndex(1)
 
     def cambio(self):
         nombre = self.comboBox.currentText()
         indice = self.comboBox.currentIndex()
         data = self.comboBox.currentData()
 
-        self.txt_nombre.setText(nombre)
-        self.txt_indice.setText(str(indice))
-        self.txt_data.setText(str(data))
+        if indice != -1:
+            self.txt_nombre.setText(nombre)
+            self.txt_indice.setText(str(indice))
+            self.txt_data.setText(str(data))
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

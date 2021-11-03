@@ -35,6 +35,10 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         m.setText(msj)
         m.exec_()
 
+#PRÁCTICA 1. REALIZAR LA UTILIZACIÓN DE AL MENOS DOS DE LOS TRES ELEMENTOS
+#VISTOS EN CLASE PARA REALIZAR ALGUNO DE LOS EJERCICIOS ENCARGADOS EN LA UNIDAD 2.
+
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

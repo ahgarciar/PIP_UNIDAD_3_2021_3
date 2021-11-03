@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>873</width>
-    <height>494</height>
+    <width>867</width>
+    <height>478</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -120,6 +120,13 @@
       <height>51</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
    </widget>
    <widget class="QLineEdit" name="txt_indice">
     <property name="geometry">
@@ -129,6 +136,13 @@
       <width>291</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
    </widget>
    <widget class="QLineEdit" name="txt_totalElementos">
@@ -180,6 +194,13 @@
       <height>51</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -187,7 +208,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>873</width>
+     <width>867</width>
      <height>26</height>
     </rect>
    </property>
