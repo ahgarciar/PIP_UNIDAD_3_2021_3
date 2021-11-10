@@ -23,7 +23,6 @@ print(B)
 #A_inv = n.linalg.inv(A)   # no se puede porque es rectangular
 
 B_inv = n.linalg.inv(B)
-
 print()
 print("Resultado de B inversa:")
 print(B_inv)
@@ -35,7 +34,7 @@ print(B_inv)
 
 print()
 print("Comprobación 1: ")
-print(round(B.dot(B_inv),2))
+print(n.ndarray.round(B.dot(B_inv),2))
 
 
 print()
